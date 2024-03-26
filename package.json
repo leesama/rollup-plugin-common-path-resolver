@@ -35,6 +35,22 @@
   "engines": {
     "node": ">=18.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leesama/rollup-plugin-common-path-resolver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leesama/rollup-plugin-common-path-resolver/issues"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "path",
+    "vite",
+    "vite-plugin",
+    "ts",
+    "typescript"
+  ],
   "dependencies": {
     "fs-extra": "^11.2.0"
   },

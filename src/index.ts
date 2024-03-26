@@ -1,4 +1,5 @@
 import { PluginOption } from 'vite'
+
 import {
   shouldSkipResolution,
   constructCommonRootPath,

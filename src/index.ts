@@ -1,4 +1,4 @@
-import { PluginOption } from 'vite'
+import { PluginOption, Alias } from 'vite'
 
 import {
   shouldSkipResolution,

@@ -17,7 +17,8 @@
     "prepublishOnly": "pinst --disable",
     "prettier": "pretty-quick --staged && pnpm run lint",
     "test": "vitest run",
-    "test:dev": "vitest"
+    "test:dev": "vitest",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",

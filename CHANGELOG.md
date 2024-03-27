@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/leesama/rollup-plugin-common-path-resolver/compare/v1.0.1...v1.0.2) (2024-03-27)
+
+
+### Features
+
+* add changelog ([96356dd](https://github.com/leesama/rollup-plugin-common-path-resolver/commit/96356dde927d43e4c9dcdb6a073b4c253ef8234d))
+
+
+
 # [1.0.1](https://github.com/leesama/rollup-plugin-common-path-resolver/compare/v1.0.0...v1.0.1) (2024-03-27)
 
 

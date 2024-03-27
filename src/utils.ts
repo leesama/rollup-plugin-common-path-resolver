@@ -8,10 +8,10 @@ export function shouldSkipResolution(
 
 export function extractPathDirectory(
   importer: string,
-  examplePathSegment: string,
+  packagePathSegment: string,
   sourcePathSegment: string
 ): string | null {
-  const regText = new RegExp(`(?<dirPath>.*${examplePathSegment}.*${sourcePathSegment}).*`)
+  const regText = new RegExp(`(?<dirPath>.*${packagePathSegment}.*${sourcePathSegment}).*`)
   const pathDir = importer.match(regText)
   if (!pathDir || !pathDir.groups?.dirPath) {
     console.error(`Unable to find matching path segment in importer: ${importer}`)
@@ -34,11 +34,11 @@ export async function resolvePath(newPath: string): Promise<string | null> {
 
 export function extractProjectName(
   importer: string,
-  examplePathSegment: string,
+  packagePathSegment: string,
   sourcePathSegment: string
 ): string | null {
   const match = new RegExp(
-    `${examplePathSegment}[\\\\/](?<projectName>[^\\\\/]+)[\\\\/]${sourcePathSegment}`
+    `${packagePathSegment}[\\\\/](?<projectName>[^\\\\/]+)[\\\\/]${sourcePathSegment}`
   ).exec(importer)
   if (!match || !match.groups?.projectName) {
     console.error(`Unable to extract project name from importer: ${importer}`)

@@ -47,7 +47,7 @@ export default {
   plugins: [
     commonPathResolver({
       // Configuration options
-      examplePathSegment: 'packages',
+      packagePathSegment: 'packages',
       sourcePathSegment: 'src',
       commonFolderName: 'common',
       pathPrefix: '@',
@@ -58,7 +58,7 @@ export default {
 
 ## Configuration Options
 
-- **examplePathSegment** (`string`): The example path segment, used to locate specific paths within the project. Default is `'packages'`.
+- **packagePathSegment** (`string`): The example path segment is used to locate packages within the project as well as the path to common packages. The default is `'packages'`.
 - **sourcePathSegment** (`string`): The source code path segment, usually the directory where source code is stored in the project. Default is `'src'`.
 - **commonFolderName** (`string`): The name of the common folder, used for directories sharing code. Default is `'common'`.
 - **pathPrefix** (`string`): The path prefix, used to replace the source path prefix. Default is `'@'`.
@@ -82,6 +82,10 @@ my-project/
 ```
 
 You can use the `rollup-plugin-common-path-resolver` plugin, configuring the path prefix `@` to point to the `common` directory, thus easily sharing the `utils.js` file between `module1` and `module2`.
+
+## Further Exploration
+
+To better understand how to use `rollup-plugin-common-path-resolver`, it is recommended to check out the project's `packages` directory. There, you will find more detailed sample code that can help you quickly get started and gain a deeper understanding of how to use this plugin.
 
 ## Support and Contribution
 

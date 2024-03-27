@@ -47,7 +47,7 @@ export default {
   plugins: [
     commonPathResolver({
       // 配置选项
-      examplePathSegment: 'packages',
+      packagePathSegment: 'packages',
       sourcePathSegment: 'src',
       commonFolderName: 'common',
       pathPrefix: '@',
@@ -58,7 +58,7 @@ export default {
 
 ## 配置选项
 
-- **examplePathSegment** (`string`): 示例路径部分，用于定位项目中的特定路径。默认为 `'packages'`。
+- **packagePathSegment** (`string`): 示例路径部分，用于定位项目中的包以及公共包所在路径。默认为 `'packages'`。
 - **sourcePathSegment** (`string`): 源代码路径部分，通常是项目中存放源代码的目录。默认为 `'src'`。
 - **commonFolderName** (`string`): 公共文件夹的名称，用于共享代码的目录。默认为 `'common'`。
 - **pathPrefix** (`string`): 路径前缀，用于替换源路径前缀。默认为 `'@'`。
@@ -82,6 +82,10 @@ my-project/
 ```
 
 你可以使用 `rollup-plugin-common-path-resolver` 插件，配置路径前缀 `@` 指向 `common` 目录，从而在 `module1` 和 `module2` 中轻松共享 `utils.js` 文件。
+
+## 进一步探索
+
+为了更好地理解如何使用 rollup-plugin-common-path-resolver，建议查看项目的 packages 目录，那里提供了更详细的示例代码，可以帮助你快速上手和深入了解该插件的使用方式。
 
 ## 支持和贡献
 

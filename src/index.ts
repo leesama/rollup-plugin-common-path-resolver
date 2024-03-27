@@ -11,7 +11,7 @@ import {
 import path from 'node:path'
 
 export type CommonPathResolverOptions = {
-  examplePathSegment?: string
+  packagePathSegment?: string
   sourcePathSegment?: string
   commonFolderName?: string
   pathPrefix?: string
@@ -22,7 +22,7 @@ export default function rollupPluginCommonPathResolver(
   options: CommonPathResolverOptions = {}
 ): PluginOption {
   const {
-    examplePathSegment = 'packages',
+    packagePathSegment = 'packages',
     sourcePathSegment = 'src',
     commonFolderName = 'common',
     pathPrefix = '@',
@@ -37,7 +37,7 @@ export default function rollupPluginCommonPathResolver(
       }
 
       try {
-        const dirPath = extractPathDirectory(importer, examplePathSegment, sourcePathSegment)
+        const dirPath = extractPathDirectory(importer, packagePathSegment, sourcePathSegment)
         if (!dirPath) throw new Error('Directory path extraction failed.')
 
         const newPath = path.join(dirPath, replaceSourcePrefix(source, pathPrefix))
@@ -47,7 +47,7 @@ export default function rollupPluginCommonPathResolver(
           return this.resolve(resolvedPath, importer)
         }
 
-        const projectName = extractProjectName(importer, examplePathSegment, sourcePathSegment)
+        const projectName = extractProjectName(importer, packagePathSegment, sourcePathSegment)
         if (!projectName) throw new Error('Project name extraction failed.')
 
         const commonRootPath = constructCommonRootPath(newPath, projectName, commonFolderName)
